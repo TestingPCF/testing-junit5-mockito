@@ -7,7 +7,8 @@ RUN mkdir /work
 EXPOSE 9102
 
 # Copying the application's jar file inside the container
-COPY testing-junit5-mockito/target/testing-junit5-mockito-1.0.jar /work/app.jar
+# COPY testing-junit5-mockito/target/testing-junit5-mockito-1.0.jar /work/app.jar
 
 # Run the jar file 
-CMD java -jar /work/app.jar
+# CMD java -jar /work/app.jar
+CMD java -jar testing-junit5-mockito-1.0.jar
