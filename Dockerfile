@@ -1,6 +1,5 @@
 # Start with a base image containing Java runtime
-ARG BASE_ECR_URL
-FROM $BASE_ECR_URL/wawa-alpine-jre:latest
+FROM adoptopenjdk/openjdk11
 # Create work folder
 RUN mkdir /work
 
@@ -8,7 +7,7 @@ RUN mkdir /work
 EXPOSE 9102
 
 # Copying the application's jar file inside the container
-COPY testing-junit5-mockito/target/testing-junit5-mockito-1.0.jar /work/app.jar
+COPY target/testing-junit5-mockito-1.0.jar /work/app.jar
 
 # Run the jar file 
 CMD java -jar /work/app.jar
