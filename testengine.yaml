@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: testengine
+  name: testengine
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testengine
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: testengine
+    spec:
+      containers:
+      - image: amitkashyap/engine
+        name: readyapi-testengine
+        env:
+          - name: TESTENGINE_RESET_ADMIN_ACCOUNT
+            value: "true"
+          - name: TESTENGINE_PASSWORD
+            value: "wawate"
