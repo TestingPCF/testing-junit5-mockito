@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites><properties><property name="testjobId" value="935cc3c9-1a0e-4efa-8fc9-771c510cdd42"/><property name="status" value="FINISHED"/><property name="jobType" value="PROJECT"/></properties><testsuite name="testEngine.TestSuite 1" tests="1" failures="0" errors="0" time="1.099"><testcase name="TestCase 1" time="0.921"/></testsuite></testsuites>
